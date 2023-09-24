@@ -1,0 +1,26 @@
+// fazer com verilog estrutural
+
+module Divisor_Clock (clock_in, clock_out);
+	
+	input clock_in;
+	output clock_out;
+	
+	
+	reg [25:0] COUNTER;
+	
+	initial begin
+		COUNTER <= 25'b0;
+	end
+	
+	assign clock_out = COUNTER[26];
+	
+	always @(posedge clock_in) begin
+		COUNTER <= COUNTER + 1; // incrementa o contador
+		
+		if (COUNTER == 26'H3FFFFFF) begin // reseta o contador quando estiver no limite
+			COUNTER <= 26'b0;
+		end
+		
+	end
+	
+endmodule

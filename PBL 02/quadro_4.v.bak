@@ -1,0 +1,18 @@
+module quadro_4(lock, contador, colunas);
+	input clock;
+	input [2:0] contador;
+	output [4:0] colunas;
+	
+	wire not_a, not_b, not_c;
+	wire and0;
+	wire or0;
+	wire xor0, xor1;
+	
+	// A = contador[2]
+	// B = contador[1]
+	// C = contador[0]
+	
+	// C0 = (C⊕B) + A’B’
+	
+	
+endmodule

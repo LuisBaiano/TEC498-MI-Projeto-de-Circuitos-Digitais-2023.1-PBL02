@@ -1,0 +1,513 @@
+|Varredura_Matriz
+clock_50MHz => clock_50MHz.IN1
+chaves[0] => chaves[0].IN1
+chaves[1] => chaves[1].IN1
+linhas[0] << linhas.DB_MAX_OUTPUT_PORT_TYPE
+linhas[1] << linhas.DB_MAX_OUTPUT_PORT_TYPE
+linhas[2] << linhas.DB_MAX_OUTPUT_PORT_TYPE
+linhas[3] << linhas.DB_MAX_OUTPUT_PORT_TYPE
+linhas[4] << linhas.DB_MAX_OUTPUT_PORT_TYPE
+linhas[5] << linhas.DB_MAX_OUTPUT_PORT_TYPE
+linhas[6] << linhas.DB_MAX_OUTPUT_PORT_TYPE
+colunas[0] << colunas.DB_MAX_OUTPUT_PORT_TYPE
+colunas[1] << colunas.DB_MAX_OUTPUT_PORT_TYPE
+colunas[2] << colunas.DB_MAX_OUTPUT_PORT_TYPE
+colunas[3] << colunas.DB_MAX_OUTPUT_PORT_TYPE
+colunas[4] << colunas.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3
+clock_in => clock_in.IN25
+clock0 <= FF_T:comb_10.port4
+clock1 <= FF_T:comb_50.port4
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_3
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_4
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_6
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_8
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_10
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_12
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_14
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_16
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_18
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_20
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_22
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_24
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_26
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_28
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_30
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_32
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_34
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_36
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_38
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_40
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_42
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_44
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_46
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_48
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_50
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Contador:comb_4
+clock => clockf.DATAA
+chaves[0] => chaves[0].IN3
+chaves[1] => chaves[1].IN3
+contador[0] <= contador.DB_MAX_OUTPUT_PORT_TYPE
+contador[1] <= contador.DB_MAX_OUTPUT_PORT_TYPE
+contador[2] <= contador.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Contador:comb_4|FF_T:comb_7
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Contador:comb_4|FF_T:comb_8
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Contador:comb_4|FF_T:comb_10
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Contador:comb_15
+clock => clockf.DATAA
+chaves[0] => chaves[0].IN3
+chaves[1] => chaves[1].IN3
+contador[0] <= contador.DB_MAX_OUTPUT_PORT_TYPE
+contador[1] <= contador.DB_MAX_OUTPUT_PORT_TYPE
+contador[2] <= contador.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Contador:comb_15|FF_T:comb_7
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Contador:comb_15|FF_T:comb_8
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Contador:comb_15|FF_T:comb_10
+clock => q~reg0.CLK
+t => q~reg0.ENA
+chaves[0] => Equal0.IN1
+chaves[1] => Equal0.IN0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+not_q <= not_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Multiplexador:comb_16
+quadros[0] => WideAnd1.IN0
+quadros[0] => WideAnd3.IN0
+quadros[0] => WideAnd5.IN0
+quadros[0] => WideAnd7.IN0
+quadros[0] => WideAnd0.IN0
+quadros[0] => WideAnd2.IN0
+quadros[0] => WideAnd4.IN0
+quadros[0] => WideAnd6.IN0
+quadros[1] => WideAnd2.IN1
+quadros[1] => WideAnd3.IN1
+quadros[1] => WideAnd6.IN1
+quadros[1] => WideAnd7.IN1
+quadros[1] => WideAnd0.IN1
+quadros[1] => WideAnd1.IN1
+quadros[1] => WideAnd4.IN1
+quadros[1] => WideAnd5.IN1
+quadros[2] => WideAnd4.IN2
+quadros[2] => WideAnd5.IN2
+quadros[2] => WideAnd6.IN2
+quadros[2] => WideAnd7.IN2
+quadros[2] => WideAnd0.IN2
+quadros[2] => WideAnd1.IN2
+quadros[2] => WideAnd2.IN2
+quadros[2] => WideAnd3.IN2
+contador[0] => contador[0].IN8
+contador[1] => contador[1].IN8
+contador[2] => contador[2].IN8
+colunas[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+colunas[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+colunas[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+colunas[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+colunas[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Multiplexador:comb_16|quadro_0:comb_14
+contador[0] => comb.IN1
+contador[0] => comb.IN1
+contador[0] => comb.IN1
+contador[0] => comb.IN1
+contador[0] => comb.IN0
+contador[1] => and0.IN0
+contador[1] => or0.IN0
+contador[1] => comb.IN1
+contador[2] => and0.IN1
+contador[2] => or0.IN1
+colunas[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Multiplexador:comb_16|quadro_1:comb_15
+contador[0] => comb.IN1
+contador[0] => comb.IN1
+contador[0] => comb.IN1
+contador[0] => comb.IN1
+contador[0] => comb.IN1
+contador[1] => and0.IN0
+contador[1] => or0.IN0
+contador[2] => and0.IN1
+contador[2] => or0.IN1
+colunas[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Multiplexador:comb_16|quadro_2:comb_16
+contador[0] => comb.IN0
+contador[0] => comb.IN0
+contador[0] => comb.IN0
+contador[0] => comb.IN0
+contador[0] => and1.IN1
+contador[1] => comb.IN1
+contador[1] => comb.IN1
+contador[1] => comb.IN1
+contador[1] => comb.IN1
+contador[1] => or0.IN0
+contador[1] => and0.IN0
+contador[2] => or0.IN1
+contador[2] => and0.IN1
+colunas[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Multiplexador:comb_16|quadro_3:comb_17
+contador[0] => comb.IN1
+contador[0] => comb.IN0
+contador[0] => comb.IN1
+contador[0] => WideAnd0.IN0
+contador[0] => comb.IN1
+contador[1] => and0.IN0
+contador[1] => comb.IN1
+contador[1] => WideAnd0.IN1
+contador[1] => or0.IN0
+contador[2] => and0.IN1
+contador[2] => WideAnd0.IN2
+contador[2] => or0.IN1
+colunas[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[3] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+colunas[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Multiplexador:comb_16|quadro_4:comb_18
+contador[0] => comb.IN0
+contador[0] => comb.IN0
+contador[0] => comb.IN0
+contador[0] => WideAnd0.IN0
+contador[0] => WideAnd1.IN0
+contador[0] => or0.IN0
+contador[0] => and2.IN0
+contador[1] => WideAnd1.IN1
+contador[1] => comb.IN1
+contador[1] => comb.IN1
+contador[1] => comb.IN1
+contador[1] => WideAnd0.IN1
+contador[1] => and3.IN1
+contador[2] => WideAnd1.IN2
+contador[2] => or0.IN1
+contador[2] => and2.IN1
+contador[2] => WideAnd0.IN2
+colunas[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Multiplexador:comb_16|quadro_5:comb_19
+contador[0] => comb.IN1
+contador[0] => comb.IN0
+contador[0] => comb.IN1
+contador[0] => comb.IN0
+contador[0] => and1.IN0
+contador[1] => and0.IN0
+contador[1] => comb.IN1
+contador[2] => comb.IN1
+contador[2] => and1.IN1
+contador[2] => and0.IN1
+colunas[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Multiplexador:comb_16|quadro_6:comb_20
+contador[0] => comb.IN1
+contador[0] => and1.IN0
+contador[0] => and2.IN0
+contador[0] => comb.IN1
+contador[0] => and3.IN0
+contador[0] => comb.IN0
+contador[1] => and3.IN1
+contador[1] => and0.IN0
+contador[1] => and1.IN1
+contador[1] => comb.IN1
+contador[2] => and2.IN1
+contador[2] => and0.IN1
+colunas[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Varredura_Matriz|Multiplexador:comb_16|quadro_7:comb_21
+contador[0] => and0.IN0
+contador[0] => and1.IN0
+contador[0] => comb.IN1
+contador[0] => colunas[0].DATAIN
+contador[0] => colunas[2].DATAIN
+contador[0] => colunas[3].DATAIN
+contador[1] => and0.IN1
+contador[1] => and2.IN0
+contador[2] => and1.IN1
+contador[2] => and2.IN1
+colunas[0] <= contador[0].DB_MAX_OUTPUT_PORT_TYPE
+colunas[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+colunas[2] <= contador[0].DB_MAX_OUTPUT_PORT_TYPE
+colunas[3] <= contador[0].DB_MAX_OUTPUT_PORT_TYPE
+colunas[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

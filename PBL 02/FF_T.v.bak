@@ -1,0 +1,28 @@
+// Modulo que descreve elemento biestavel basico (flip flop T)
+
+module FF_T(clock, t, chaves, q, not_q);
+	input clock, t;
+	input [1:0] chaves;
+	
+	output reg q;
+	output not_q;
+	
+	wire reset;
+	
+	assign reset = (chaves == 2'b00)? 1'b1 : 1'b0; // quando as chaves CH0 e CH1 estiverem em 0, é feito o reset
+	
+	always @(posedge clock, posedge reset) begin
+		if (reset) begin // caso for realizado o reset, q recebe nivel logico baixo
+			q <= 1'b0;
+		end
+		
+		else if (t) begin
+			q <= !q;
+			// q <= ~q;
+		end
+	end
+	
+	assign not_q = (reset)? 1'b0 : !q;
+	//assign not_q = (reset)? 1'b0 : ~q;
+
+endmodule

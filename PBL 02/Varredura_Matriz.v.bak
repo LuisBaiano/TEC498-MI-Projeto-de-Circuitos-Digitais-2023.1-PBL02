@@ -1,0 +1,7 @@
+module Varredura_Matriz(clock, contador, linhas);
+	input clock;
+	output [6:0] linhas;
+	
+	
+	
+endmodule

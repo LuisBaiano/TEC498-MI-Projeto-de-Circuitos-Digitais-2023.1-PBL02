@@ -1,0 +1,30 @@
+module outro_contador(clock, chaves, contador);
+	input clock;
+	input [1:0] chaves;
+	
+	output [2:0] contador;
+	
+	// A = contador[0]
+	// B = contador[1]
+	// C = contador[2]
+	
+	wire a, b, c, not_a, not_b, not_c;
+	wire and0;
+	wire clockf;
+	
+	assign clockf = (chaves == 2'b11)? 1'b0 : clock;
+	
+	FF_T(clockf, 1'b1, chaves, a, not_a);
+	
+	FF_T(clockf, a, chaves, b, not_b);
+	
+	and(and0, a, b);
+	
+	FF_T(clockf, and0, chaves, c, not_c);
+	
+	assign contador[0] = (chaves[0] == 1'b1)?  ~a: a;
+	assign contador[1] = (chaves[0] == 1'b1)?  ~b: b;
+	assign contador[2] = (chaves[0] == 1'b1)?  ~c: c;
+	
+	
+endmodule

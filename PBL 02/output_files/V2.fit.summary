@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri May  5 17:10:32 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : V2
+Top-level Entity Name : Varredura_Matriz
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 67 / 240 ( 28 % )
+Total pins : 15 / 80 ( 19 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

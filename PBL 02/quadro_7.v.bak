@@ -1,0 +1,20 @@
+module quadro_7(lock, contador, colunas);
+	input clock;
+	input [2:0] contador;
+	output [4:0] colunas;
+	
+	wire not_a, not_b, not_c;
+	wire and0, and1, and2, and3, and4;
+	wire or0, or1, or2, or3, or4;
+	
+	// A = contador[2]
+	// B = contador[1]
+	// C = contador[0]
+	
+	not(not_a, contador[2]);
+	not(not_b, contador[1]);
+	not(not_c, contador[0]);
+	
+	
+	
+endmodule

@@ -1,0 +1,670 @@
+Timing Analyzer report for V2
+Fri May  5 17:10:42 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clock_50MHz'
+ 12. Setup: 'chaves[0]'
+ 13. Setup: 'Divisor_Clock:comb_3|FF_T:comb_10|q'
+ 14. Hold: 'clock_50MHz'
+ 15. Hold: 'Divisor_Clock:comb_3|FF_T:comb_10|q'
+ 16. Hold: 'chaves[0]'
+ 17. Recovery: 'chaves[0]'
+ 18. Removal: 'chaves[0]'
+ 19. Setup Transfers
+ 20. Hold Transfers
+ 21. Recovery Transfers
+ 22. Removal Transfers
+ 23. Report TCCS
+ 24. Report RSKM
+ 25. Unconstrained Paths Summary
+ 26. Clock Status Summary
+ 27. Unconstrained Input Ports
+ 28. Unconstrained Output Ports
+ 29. Unconstrained Input Ports
+ 30. Unconstrained Output Ports
+ 31. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; V2                                                  ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM240T100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                   ;
++-------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------+
+; Clock Name                          ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                 ;
++-------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------+
+; chaves[0]                           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { chaves[0] }                           ;
+; clock_50MHz                         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock_50MHz }                         ;
+; Divisor_Clock:comb_3|FF_T:comb_10|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Divisor_Clock:comb_3|FF_T:comb_10|q } ;
++-------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fmax Summary                                                                                                                       ;
++------------+-----------------+-------------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                          ; Note                                                          ;
++------------+-----------------+-------------------------------------+---------------------------------------------------------------+
+; 115.27 MHz ; 115.27 MHz      ; clock_50MHz                         ;                                                               ;
+; 365.1 MHz  ; 304.04 MHz      ; chaves[0]                           ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 365.63 MHz ; 365.63 MHz      ; Divisor_Clock:comb_3|FF_T:comb_10|q ;                                                               ;
++------------+-----------------+-------------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------------------+
+; Setup Summary                                                ;
++-------------------------------------+--------+---------------+
+; Clock                               ; Slack  ; End Point TNS ;
++-------------------------------------+--------+---------------+
+; clock_50MHz                         ; -7.675 ; -137.947      ;
+; chaves[0]                           ; -1.739 ; -4.503        ;
+; Divisor_Clock:comb_3|FF_T:comb_10|q ; -1.735 ; -4.507        ;
++-------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------+
+; Hold Summary                                                 ;
++-------------------------------------+--------+---------------+
+; Clock                               ; Slack  ; End Point TNS ;
++-------------------------------------+--------+---------------+
+; clock_50MHz                         ; -1.380 ; -2.282        ;
+; Divisor_Clock:comb_3|FF_T:comb_10|q ; 1.694  ; 0.000         ;
+; chaves[0]                           ; 1.701  ; 0.000         ;
++-------------------------------------+--------+---------------+
+
+
++------------------------------------+
+; Recovery Summary                   ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; chaves[0] ; -0.850 ; -2.550        ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Removal Summary                   ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; chaves[0] ; 0.796 ; 0.000         ;
++-----------+-------+---------------+
+
+
++--------------------------------------------------------------+
+; Minimum Pulse Width Summary                                  ;
++-------------------------------------+--------+---------------+
+; Clock                               ; Slack  ; End Point TNS ;
++-------------------------------------+--------+---------------+
+; chaves[0]                           ; -2.289 ; -2.289        ;
+; clock_50MHz                         ; -2.289 ; -2.289        ;
+; Divisor_Clock:comb_3|FF_T:comb_10|q ; 0.234  ; 0.000         ;
++-------------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clock_50MHz'                                                                                                                                     ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -7.675 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 8.342      ;
+; -7.671 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 8.338      ;
+; -7.529 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 8.196      ;
+; -7.525 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 8.192      ;
+; -7.508 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 8.175      ;
+; -7.362 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 8.029      ;
+; -7.348 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 8.015      ;
+; -7.344 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 8.011      ;
+; -7.181 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.848      ;
+; -7.031 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.698      ;
+; -7.030 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_40|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.697      ;
+; -7.021 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.688      ;
+; -6.992 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.659      ;
+; -6.988 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.655      ;
+; -6.885 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.552      ;
+; -6.884 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_40|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.551      ;
+; -6.875 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.542      ;
+; -6.825 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.492      ;
+; -6.735 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_36|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.402      ;
+; -6.734 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_38|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.401      ;
+; -6.733 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_34|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.400      ;
+; -6.704 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.371      ;
+; -6.703 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_40|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.370      ;
+; -6.694 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.361      ;
+; -6.589 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_36|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.256      ;
+; -6.588 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_38|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.255      ;
+; -6.587 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_34|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.254      ;
+; -6.451 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_32|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.118      ;
+; -6.442 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_30|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.109      ;
+; -6.418 ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.085      ;
+; -6.414 ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.081      ;
+; -6.408 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_36|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.075      ;
+; -6.407 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_38|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.074      ;
+; -6.406 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_34|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.073      ;
+; -6.348 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.015      ;
+; -6.347 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_40|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.014      ;
+; -6.338 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 7.005      ;
+; -6.305 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_32|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.972      ;
+; -6.296 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_30|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.963      ;
+; -6.251 ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.918      ;
+; -6.238 ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.905      ;
+; -6.234 ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.901      ;
+; -6.124 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_32|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.791      ;
+; -6.117 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_26|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.784      ;
+; -6.115 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_30|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.782      ;
+; -6.114 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_24|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.781      ;
+; -6.113 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_22|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.780      ;
+; -6.108 ; Divisor_Clock:comb_3|FF_T:comb_24|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.775      ;
+; -6.104 ; Divisor_Clock:comb_3|FF_T:comb_24|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.771      ;
+; -6.071 ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.738      ;
+; -6.052 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_36|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.719      ;
+; -6.051 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_38|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.718      ;
+; -6.050 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_34|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.717      ;
+; -5.974 ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_28|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.641      ;
+; -5.971 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_26|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.638      ;
+; -5.968 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_24|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.635      ;
+; -5.967 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_22|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.634      ;
+; -5.941 ; Divisor_Clock:comb_3|FF_T:comb_24|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.608      ;
+; -5.930 ; Divisor_Clock:comb_3|FF_T:comb_26|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.597      ;
+; -5.926 ; Divisor_Clock:comb_3|FF_T:comb_26|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.593      ;
+; -5.901 ; Divisor_Clock:comb_3|FF_T:comb_16|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.568      ;
+; -5.897 ; Divisor_Clock:comb_3|FF_T:comb_16|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.564      ;
+; -5.828 ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_28|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.495      ;
+; -5.790 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_26|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.457      ;
+; -5.787 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_24|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.454      ;
+; -5.786 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_22|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.453      ;
+; -5.774 ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.441      ;
+; -5.773 ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_40|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.440      ;
+; -5.768 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_32|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.435      ;
+; -5.764 ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.431      ;
+; -5.763 ; Divisor_Clock:comb_3|FF_T:comb_26|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.430      ;
+; -5.760 ; Divisor_Clock:comb_3|FF_T:comb_18|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.427      ;
+; -5.759 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_30|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.426      ;
+; -5.758 ; Divisor_Clock:comb_3|FF_T:comb_22|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.425      ;
+; -5.756 ; Divisor_Clock:comb_3|FF_T:comb_18|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.423      ;
+; -5.754 ; Divisor_Clock:comb_3|FF_T:comb_22|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.421      ;
+; -5.734 ; Divisor_Clock:comb_3|FF_T:comb_16|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.401      ;
+; -5.647 ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_28|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.314      ;
+; -5.594 ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.261      ;
+; -5.593 ; Divisor_Clock:comb_3|FF_T:comb_18|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.260      ;
+; -5.593 ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_40|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.260      ;
+; -5.591 ; Divisor_Clock:comb_3|FF_T:comb_22|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.258      ;
+; -5.587 ; Divisor_Clock:comb_3|FF_T:comb_20|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.254      ;
+; -5.584 ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.251      ;
+; -5.583 ; Divisor_Clock:comb_3|FF_T:comb_20|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.250      ;
+; -5.478 ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_36|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.145      ;
+; -5.477 ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_38|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.144      ;
+; -5.476 ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_34|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.143      ;
+; -5.464 ; Divisor_Clock:comb_3|FF_T:comb_24|q ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.131      ;
+; -5.463 ; Divisor_Clock:comb_3|FF_T:comb_24|q ; Divisor_Clock:comb_3|FF_T:comb_40|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.130      ;
+; -5.454 ; Divisor_Clock:comb_3|FF_T:comb_24|q ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.121      ;
+; -5.434 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_26|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.101      ;
+; -5.431 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_24|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.098      ;
+; -5.430 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_22|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.097      ;
+; -5.420 ; Divisor_Clock:comb_3|FF_T:comb_20|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 6.087      ;
+; -5.298 ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_36|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 5.965      ;
+; -5.297 ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_38|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 5.964      ;
+; -5.296 ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_34|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 5.963      ;
+; -5.291 ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_28|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 5.958      ;
+; -5.286 ; Divisor_Clock:comb_3|FF_T:comb_26|q ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz  ; clock_50MHz ; 1.000        ; 0.000      ; 5.953      ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'chaves[0]'                                                                                                                               ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.739 ; Contador:comb_15|FF_T:comb_8|q  ; Contador:comb_15|FF_T:comb_10|q ; chaves[0]    ; chaves[0]   ; 1.000        ; 0.000      ; 2.406      ;
+; -1.509 ; Contador:comb_15|FF_T:comb_8|q  ; Contador:comb_15|FF_T:comb_8|q  ; chaves[0]    ; chaves[0]   ; 1.000        ; 0.000      ; 2.176      ;
+; -1.452 ; Contador:comb_15|FF_T:comb_10|q ; Contador:comb_15|FF_T:comb_10|q ; chaves[0]    ; chaves[0]   ; 1.000        ; 0.000      ; 2.119      ;
+; -1.268 ; Contador:comb_15|FF_T:comb_7|q  ; Contador:comb_15|FF_T:comb_10|q ; chaves[0]    ; chaves[0]   ; 1.000        ; 0.000      ; 1.935      ;
+; -1.257 ; Contador:comb_15|FF_T:comb_7|q  ; Contador:comb_15|FF_T:comb_8|q  ; chaves[0]    ; chaves[0]   ; 1.000        ; 0.000      ; 1.924      ;
+; -1.255 ; Contador:comb_15|FF_T:comb_7|q  ; Contador:comb_15|FF_T:comb_7|q  ; chaves[0]    ; chaves[0]   ; 1.000        ; 0.000      ; 1.922      ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'Divisor_Clock:comb_3|FF_T:comb_10|q'                                                                                                                                                  ;
++--------+--------------------------------+--------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock                        ; Latch Clock                         ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+; -1.735 ; Contador:comb_4|FF_T:comb_8|q  ; Contador:comb_4|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 1.000        ; 0.000      ; 2.402      ;
+; -1.524 ; Contador:comb_4|FF_T:comb_8|q  ; Contador:comb_4|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 1.000        ; 0.000      ; 2.191      ;
+; -1.452 ; Contador:comb_4|FF_T:comb_10|q ; Contador:comb_4|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 1.000        ; 0.000      ; 2.119      ;
+; -1.258 ; Contador:comb_4|FF_T:comb_7|q  ; Contador:comb_4|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 1.000        ; 0.000      ; 1.925      ;
+; -1.257 ; Contador:comb_4|FF_T:comb_7|q  ; Contador:comb_4|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 1.000        ; 0.000      ; 1.924      ;
+; -1.248 ; Contador:comb_4|FF_T:comb_7|q  ; Contador:comb_4|FF_T:comb_7|q  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 1.000        ; 0.000      ; 1.915      ;
++--------+--------------------------------+--------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clock_50MHz'                                                                                                                                                             ;
++--------+-------------------------------------+-------------------------------------+-------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock                        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+-------------------------------------+-------------+--------------+------------+------------+
+; -1.380 ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 2.565      ;
+; -0.880 ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 2.565      ;
+; -0.259 ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_16|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 3.686      ;
+; -0.250 ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_18|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 3.695      ;
+; -0.247 ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_20|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 3.698      ;
+; -0.146 ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 3.799      ;
+; 0.072  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 4.017      ;
+; 0.241  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_16|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 3.686      ;
+; 0.250  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_18|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 3.695      ;
+; 0.253  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_20|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 3.698      ;
+; 0.354  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 3.799      ;
+; 0.572  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 4.017      ;
+; 0.741  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_28|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 4.686      ;
+; 0.880  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_22|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 4.825      ;
+; 0.881  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_24|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 4.826      ;
+; 0.884  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_26|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 4.829      ;
+; 1.209  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_30|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 5.154      ;
+; 1.218  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_32|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 5.163      ;
+; 1.241  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_28|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 4.686      ;
+; 1.380  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_22|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 4.825      ;
+; 1.381  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_24|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 4.826      ;
+; 1.384  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_26|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 4.829      ;
+; 1.500  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_34|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 5.445      ;
+; 1.501  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_38|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 5.446      ;
+; 1.502  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_36|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 5.447      ;
+; 1.709  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_30|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 5.154      ;
+; 1.718  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_32|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 5.163      ;
+; 1.788  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_44|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 5.733      ;
+; 1.797  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_40|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 5.742      ;
+; 1.798  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_42|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 5.743      ;
+; 1.898  ; Divisor_Clock:comb_3|FF_T:comb_30|q ; Divisor_Clock:comb_3|FF_T:comb_30|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.119      ;
+; 1.934  ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_12|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.155      ;
+; 1.950  ; Divisor_Clock:comb_3|FF_T:comb_34|q ; Divisor_Clock:comb_3|FF_T:comb_38|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.171      ;
+; 2.000  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_34|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 5.445      ;
+; 2.001  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_38|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 5.446      ;
+; 2.002  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_36|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 5.447      ;
+; 2.091  ; Divisor_Clock:comb_3|FF_T:comb_42|q ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.312      ;
+; 2.102  ; Divisor_Clock:comb_3|FF_T:comb_42|q ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.323      ;
+; 2.126  ; Divisor_Clock:comb_3|FF_T:comb_24|q ; Divisor_Clock:comb_3|FF_T:comb_24|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.347      ;
+; 2.133  ; Divisor_Clock:comb_3|FF_T:comb_24|q ; Divisor_Clock:comb_3|FF_T:comb_26|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.354      ;
+; 2.135  ; Divisor_Clock:comb_3|FF_T:comb_46|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.356      ;
+; 2.152  ; Divisor_Clock:comb_3|FF_T:comb_40|q ; Divisor_Clock:comb_3|FF_T:comb_40|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.373      ;
+; 2.153  ; Divisor_Clock:comb_3|FF_T:comb_36|q ; Divisor_Clock:comb_3|FF_T:comb_36|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.374      ;
+; 2.153  ; Divisor_Clock:comb_3|FF_T:comb_40|q ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.374      ;
+; 2.154  ; Divisor_Clock:comb_3|FF_T:comb_36|q ; Divisor_Clock:comb_3|FF_T:comb_38|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.375      ;
+; 2.155  ; Divisor_Clock:comb_3|FF_T:comb_12|q ; Divisor_Clock:comb_3|FF_T:comb_14|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.376      ;
+; 2.159  ; Divisor_Clock:comb_3|FF_T:comb_16|q ; Divisor_Clock:comb_3|FF_T:comb_16|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.380      ;
+; 2.161  ; Divisor_Clock:comb_3|FF_T:comb_40|q ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.382      ;
+; 2.169  ; Divisor_Clock:comb_3|FF_T:comb_16|q ; Divisor_Clock:comb_3|FF_T:comb_18|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.390      ;
+; 2.171  ; Divisor_Clock:comb_3|FF_T:comb_16|q ; Divisor_Clock:comb_3|FF_T:comb_20|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.392      ;
+; 2.211  ; Divisor_Clock:comb_3|FF_T:comb_26|q ; Divisor_Clock:comb_3|FF_T:comb_26|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.432      ;
+; 2.234  ; Divisor_Clock:comb_3|FF_T:comb_44|q ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.455      ;
+; 2.239  ; Divisor_Clock:comb_3|FF_T:comb_20|q ; Divisor_Clock:comb_3|FF_T:comb_20|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.460      ;
+; 2.241  ; Divisor_Clock:comb_3|FF_T:comb_28|q ; Divisor_Clock:comb_3|FF_T:comb_28|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.462      ;
+; 2.247  ; Divisor_Clock:comb_3|FF_T:comb_14|q ; Divisor_Clock:comb_3|FF_T:comb_14|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.468      ;
+; 2.248  ; Divisor_Clock:comb_3|FF_T:comb_38|q ; Divisor_Clock:comb_3|FF_T:comb_38|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.469      ;
+; 2.251  ; Divisor_Clock:comb_3|FF_T:comb_28|q ; Divisor_Clock:comb_3|FF_T:comb_30|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.472      ;
+; 2.263  ; Divisor_Clock:comb_3|FF_T:comb_34|q ; Divisor_Clock:comb_3|FF_T:comb_34|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.484      ;
+; 2.265  ; Divisor_Clock:comb_3|FF_T:comb_34|q ; Divisor_Clock:comb_3|FF_T:comb_36|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.486      ;
+; 2.275  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 6.220      ;
+; 2.288  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_44|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 5.733      ;
+; 2.293  ; Divisor_Clock:comb_3|FF_T:comb_28|q ; Divisor_Clock:comb_3|FF_T:comb_32|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.514      ;
+; 2.297  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_40|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 5.742      ;
+; 2.298  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_42|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 5.743      ;
+; 2.338  ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.559      ;
+; 2.340  ; Divisor_Clock:comb_3|FF_T:comb_18|q ; Divisor_Clock:comb_3|FF_T:comb_18|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.561      ;
+; 2.343  ; Divisor_Clock:comb_3|FF_T:comb_18|q ; Divisor_Clock:comb_3|FF_T:comb_20|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.564      ;
+; 2.355  ; Divisor_Clock:comb_3|FF_T:comb_46|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.576      ;
+; 2.378  ; Divisor_Clock:comb_3|FF_T:comb_22|q ; Divisor_Clock:comb_3|FF_T:comb_22|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.599      ;
+; 2.379  ; Divisor_Clock:comb_3|FF_T:comb_22|q ; Divisor_Clock:comb_3|FF_T:comb_24|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.600      ;
+; 2.385  ; Divisor_Clock:comb_3|FF_T:comb_22|q ; Divisor_Clock:comb_3|FF_T:comb_26|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.606      ;
+; 2.414  ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.635      ;
+; 2.416  ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.637      ;
+; 2.438  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 6.383      ;
+; 2.442  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; 0.000        ; 3.348      ; 6.387      ;
+; 2.522  ; Divisor_Clock:comb_3|FF_T:comb_32|q ; Divisor_Clock:comb_3|FF_T:comb_32|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.743      ;
+; 2.568  ; Divisor_Clock:comb_3|FF_T:comb_46|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.789      ;
+; 2.594  ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.815      ;
+; 2.723  ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.944      ;
+; 2.731  ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 2.952      ;
+; 2.775  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 6.220      ;
+; 2.938  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 6.383      ;
+; 2.942  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz ; -0.500       ; 3.348      ; 6.387      ;
+; 2.950  ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.171      ;
+; 3.131  ; Divisor_Clock:comb_3|FF_T:comb_3|q  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.352      ;
+; 3.277  ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.498      ;
+; 3.278  ; Divisor_Clock:comb_3|FF_T:comb_30|q ; Divisor_Clock:comb_3|FF_T:comb_32|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.499      ;
+; 3.283  ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.504      ;
+; 3.296  ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.517      ;
+; 3.379  ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.600      ;
+; 3.388  ; Divisor_Clock:comb_3|FF_T:comb_4|q  ; Divisor_Clock:comb_3|FF_T:comb_6|q  ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.609      ;
+; 3.395  ; Divisor_Clock:comb_3|FF_T:comb_42|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.616      ;
+; 3.546  ; Divisor_Clock:comb_3|FF_T:comb_44|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.767      ;
+; 3.558  ; Divisor_Clock:comb_3|FF_T:comb_42|q ; Divisor_Clock:comb_3|FF_T:comb_50|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.779      ;
+; 3.562  ; Divisor_Clock:comb_3|FF_T:comb_42|q ; Divisor_Clock:comb_3|FF_T:comb_48|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.783      ;
+; 3.619  ; Divisor_Clock:comb_3|FF_T:comb_40|q ; Divisor_Clock:comb_3|FF_T:comb_46|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.840      ;
+; 3.626  ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_8|q  ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.847      ;
+; 3.636  ; Divisor_Clock:comb_3|FF_T:comb_36|q ; Divisor_Clock:comb_3|FF_T:comb_44|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.857      ;
+; 3.645  ; Divisor_Clock:comb_3|FF_T:comb_36|q ; Divisor_Clock:comb_3|FF_T:comb_40|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.866      ;
+; 3.646  ; Divisor_Clock:comb_3|FF_T:comb_36|q ; Divisor_Clock:comb_3|FF_T:comb_42|q ; clock_50MHz                         ; clock_50MHz ; 0.000        ; 0.000      ; 3.867      ;
++--------+-------------------------------------+-------------------------------------+-------------------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'Divisor_Clock:comb_3|FF_T:comb_10|q'                                                                                                                                                  ;
++-------+--------------------------------+--------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock                        ; Latch Clock                         ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+; 1.694 ; Contador:comb_4|FF_T:comb_7|q  ; Contador:comb_4|FF_T:comb_7|q  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 0.000        ; 0.000      ; 1.915      ;
+; 1.703 ; Contador:comb_4|FF_T:comb_7|q  ; Contador:comb_4|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 0.000        ; 0.000      ; 1.924      ;
+; 1.704 ; Contador:comb_4|FF_T:comb_7|q  ; Contador:comb_4|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 0.000        ; 0.000      ; 1.925      ;
+; 1.898 ; Contador:comb_4|FF_T:comb_10|q ; Contador:comb_4|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 0.000        ; 0.000      ; 2.119      ;
+; 1.970 ; Contador:comb_4|FF_T:comb_8|q  ; Contador:comb_4|FF_T:comb_8|q  ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 0.000        ; 0.000      ; 2.191      ;
+; 2.181 ; Contador:comb_4|FF_T:comb_8|q  ; Contador:comb_4|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 0.000        ; 0.000      ; 2.402      ;
++-------+--------------------------------+--------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'chaves[0]'                                                                                                                               ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.701 ; Contador:comb_15|FF_T:comb_7|q  ; Contador:comb_15|FF_T:comb_7|q  ; chaves[0]    ; chaves[0]   ; 0.000        ; 0.000      ; 1.922      ;
+; 1.703 ; Contador:comb_15|FF_T:comb_7|q  ; Contador:comb_15|FF_T:comb_8|q  ; chaves[0]    ; chaves[0]   ; 0.000        ; 0.000      ; 1.924      ;
+; 1.714 ; Contador:comb_15|FF_T:comb_7|q  ; Contador:comb_15|FF_T:comb_10|q ; chaves[0]    ; chaves[0]   ; 0.000        ; 0.000      ; 1.935      ;
+; 1.898 ; Contador:comb_15|FF_T:comb_10|q ; Contador:comb_15|FF_T:comb_10|q ; chaves[0]    ; chaves[0]   ; 0.000        ; 0.000      ; 2.119      ;
+; 1.955 ; Contador:comb_15|FF_T:comb_8|q  ; Contador:comb_15|FF_T:comb_8|q  ; chaves[0]    ; chaves[0]   ; 0.000        ; 0.000      ; 2.176      ;
+; 2.185 ; Contador:comb_15|FF_T:comb_8|q  ; Contador:comb_15|FF_T:comb_10|q ; chaves[0]    ; chaves[0]   ; 0.000        ; 0.000      ; 2.406      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'chaves[0]'                                                                                                      ;
++--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.850 ; chaves[0] ; Contador:comb_15|FF_T:comb_7|q  ; chaves[0]    ; chaves[0]   ; 0.500        ; 7.969      ; 8.986      ;
+; -0.850 ; chaves[0] ; Contador:comb_15|FF_T:comb_8|q  ; chaves[0]    ; chaves[0]   ; 0.500        ; 7.969      ; 8.986      ;
+; -0.850 ; chaves[0] ; Contador:comb_15|FF_T:comb_10|q ; chaves[0]    ; chaves[0]   ; 0.500        ; 7.969      ; 8.986      ;
+; -0.350 ; chaves[0] ; Contador:comb_15|FF_T:comb_7|q  ; chaves[0]    ; chaves[0]   ; 1.000        ; 7.969      ; 8.986      ;
+; -0.350 ; chaves[0] ; Contador:comb_15|FF_T:comb_8|q  ; chaves[0]    ; chaves[0]   ; 1.000        ; 7.969      ; 8.986      ;
+; -0.350 ; chaves[0] ; Contador:comb_15|FF_T:comb_10|q ; chaves[0]    ; chaves[0]   ; 1.000        ; 7.969      ; 8.986      ;
++--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'chaves[0]'                                                                                                      ;
++-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.796 ; chaves[0] ; Contador:comb_15|FF_T:comb_7|q  ; chaves[0]    ; chaves[0]   ; 0.000        ; 7.969      ; 8.986      ;
+; 0.796 ; chaves[0] ; Contador:comb_15|FF_T:comb_8|q  ; chaves[0]    ; chaves[0]   ; 0.000        ; 7.969      ; 8.986      ;
+; 0.796 ; chaves[0] ; Contador:comb_15|FF_T:comb_10|q ; chaves[0]    ; chaves[0]   ; 0.000        ; 7.969      ; 8.986      ;
+; 1.296 ; chaves[0] ; Contador:comb_15|FF_T:comb_7|q  ; chaves[0]    ; chaves[0]   ; -0.500       ; 7.969      ; 8.986      ;
+; 1.296 ; chaves[0] ; Contador:comb_15|FF_T:comb_8|q  ; chaves[0]    ; chaves[0]   ; -0.500       ; 7.969      ; 8.986      ;
+; 1.296 ; chaves[0] ; Contador:comb_15|FF_T:comb_10|q ; chaves[0]    ; chaves[0]   ; -0.500       ; 7.969      ; 8.986      ;
++-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                       ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+; From Clock                          ; To Clock                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+; chaves[0]                           ; chaves[0]                           ; 6        ; 0        ; 0        ; 0        ;
+; clock_50MHz                         ; clock_50MHz                         ; 304      ; 0        ; 0        ; 0        ;
+; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz                         ; 21       ; 21       ; 0        ; 0        ;
+; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 0        ; 0        ; 0        ; 6        ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                        ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+; From Clock                          ; To Clock                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+; chaves[0]                           ; chaves[0]                           ; 6        ; 0        ; 0        ; 0        ;
+; clock_50MHz                         ; clock_50MHz                         ; 304      ; 0        ; 0        ; 0        ;
+; Divisor_Clock:comb_3|FF_T:comb_10|q ; clock_50MHz                         ; 21       ; 21       ; 0        ; 0        ;
+; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; 0        ; 0        ; 0        ; 6        ;
++-------------------------------------+-------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Recovery Transfers                                                 ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; chaves[0]  ; chaves[0] ; 3        ; 3        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Removal Transfers                                                  ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; chaves[0]  ; chaves[0] ; 3        ; 3        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 27    ; 27   ;
+; Unconstrained Output Ports      ; 12    ; 12   ;
+; Unconstrained Output Port Paths ; 75    ; 75   ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                           ;
++-------------------------------------+-------------------------------------+------+-------------+
+; Target                              ; Clock                               ; Type ; Status      ;
++-------------------------------------+-------------------------------------+------+-------------+
+; Divisor_Clock:comb_3|FF_T:comb_10|q ; Divisor_Clock:comb_3|FF_T:comb_10|q ; Base ; Constrained ;
+; chaves[0]                           ; chaves[0]                           ; Base ; Constrained ;
+; clock_50MHz                         ; clock_50MHz                         ; Base ; Constrained ;
++-------------------------------------+-------------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; chaves[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chaves[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; colunas[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; colunas[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; colunas[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; colunas[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; colunas[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; chaves[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chaves[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; colunas[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; colunas[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; colunas[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; colunas[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; colunas[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; linhas[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri May  5 17:10:37 2023
+Info: Command: quartus_sta V2 -c V2
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'V2.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Divisor_Clock:comb_3|FF_T:comb_10|q Divisor_Clock:comb_3|FF_T:comb_10|q
+    Info (332105): create_clock -period 1.000 -name clock_50MHz clock_50MHz
+    Info (332105): create_clock -period 1.000 -name chaves[0] chaves[0]
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -7.675
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -7.675            -137.947 clock_50MHz 
+    Info (332119):    -1.739              -4.503 chaves[0] 
+    Info (332119):    -1.735              -4.507 Divisor_Clock:comb_3|FF_T:comb_10|q 
+Info (332146): Worst-case hold slack is -1.380
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.380              -2.282 clock_50MHz 
+    Info (332119):     1.694               0.000 Divisor_Clock:comb_3|FF_T:comb_10|q 
+    Info (332119):     1.701               0.000 chaves[0] 
+Info (332146): Worst-case recovery slack is -0.850
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.850              -2.550 chaves[0] 
+Info (332146): Worst-case removal slack is 0.796
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.796               0.000 chaves[0] 
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 chaves[0] 
+    Info (332119):    -2.289              -2.289 clock_50MHz 
+    Info (332119):     0.234               0.000 Divisor_Clock:comb_3|FF_T:comb_10|q 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 345 megabytes
+    Info: Processing ended: Fri May  5 17:10:42 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:01
+
+

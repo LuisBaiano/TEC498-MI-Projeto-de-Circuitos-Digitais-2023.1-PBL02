@@ -1,0 +1,106 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/aluno/PBLs/MEU PBL 02 v2/simulation/qsim
+vDivisor_Clock
+Z1 !s110 1682360669
+!i10b 1
+!s100 D3?34mgHZmG5l_zlTzHSc2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IU`UCgY6B0[afeN755_o@j2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1682360668
+Z5 8V2.vo
+Z6 FV2.vo
+!i122 2
+L0 32 43
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1682360669.000000
+Z9 !s107 V2.vo|
+Z10 !s90 -work|work|V2.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@divisor_@clock
+vDivisor_Clock_vlg_vec_tst
+R1
+!i10b 1
+!s100 3aEbeR@9=n[E5z<RTJ84i2
+R2
+I0C12ndM@hSf6g>U?;<59?0
+R3
+R0
+R4
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 3
+L0 30 26
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@divisor_@clock_vlg_vec_tst
+vVarredura_Matriz
+Z13 !s110 1683142316
+!i10b 1
+!s100 F]FN39D>?h=3lPhOE4@i[1
+R2
+I6Zi?f4WMPObFH=PVX8lz:3
+R3
+Z14 d/home/aluno/Documentos/PBL 02/simulation/qsim
+w1683142316
+R5
+R6
+!i122 12
+L0 32 2656
+R7
+r1
+!s85 0
+31
+Z15 !s108 1683142316.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@varredura_@matriz
+vVarredura_Matriz_vlg_vec_tst
+R13
+!i10b 1
+!s100 Vk1^8:cWWzYiSog2RTB@V3
+R2
+I]aXkFQZGf3>>S4:9[NIh03
+R3
+R14
+w1683142315
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 13
+L0 30 44
+R7
+r1
+!s85 0
+31
+R15
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+n@varredura_@matriz_vlg_vec_tst

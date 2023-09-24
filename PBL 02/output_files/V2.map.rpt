@@ -1,0 +1,699 @@
+Analysis & Synthesis report for V2
+Fri May  5 17:10:28 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "Contador:comb_4|FF_T:comb_10"
+ 10. Port Connectivity Checks: "Contador:comb_4|FF_T:comb_8"
+ 11. Port Connectivity Checks: "Contador:comb_4|FF_T:comb_7"
+ 12. Port Connectivity Checks: "Contador:comb_4"
+ 13. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_50"
+ 14. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_48"
+ 15. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_46"
+ 16. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_44"
+ 17. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_42"
+ 18. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_40"
+ 19. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_38"
+ 20. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_36"
+ 21. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_34"
+ 22. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_32"
+ 23. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_30"
+ 24. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_28"
+ 25. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_26"
+ 26. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_24"
+ 27. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_22"
+ 28. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_20"
+ 29. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_18"
+ 30. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_16"
+ 31. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_14"
+ 32. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_12"
+ 33. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_10"
+ 34. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_8"
+ 35. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_6"
+ 36. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_4"
+ 37. Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_3"
+ 38. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri May  5 17:10:28 2023       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; V2                                          ;
+; Top-level Entity Name       ; Varredura_Matriz                            ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 67                                          ;
+; Total pins                  ; 15                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; Varredura_Matriz   ; V2                 ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+; Contador.v                       ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/Contador.v         ;         ;
+; FF_T.v                           ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/FF_T.v             ;         ;
+; quadro_2.v                       ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/quadro_2.v         ;         ;
+; Multiplexador.v                  ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/Multiplexador.v    ;         ;
+; quadro_1.v                       ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/quadro_1.v         ;         ;
+; Divisor_Clock.v                  ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/Divisor_Clock.v    ;         ;
+; Varredura_Matriz.v               ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/Varredura_Matriz.v ;         ;
+; quadro_3.v                       ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/quadro_3.v         ;         ;
+; quadro_4.v                       ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/quadro_4.v         ;         ;
+; quadro_5.v                       ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/quadro_5.v         ;         ;
+; quadro_6.v                       ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/quadro_6.v         ;         ;
+; quadro_7.v                       ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/quadro_7.v         ;         ;
+; quadro_0.v                       ; yes             ; User Verilog HDL File  ; /media/aluno/LUIS/PBL 02/quadro_0.v         ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Total logic elements                        ; 67          ;
+;     -- Combinational with no register       ; 36          ;
+;     -- Register only                        ; 0           ;
+;     -- Combinational with a register        ; 31          ;
+;                                             ;             ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 32          ;
+;     -- 3 input functions                    ; 17          ;
+;     -- 2 input functions                    ; 15          ;
+;     -- 1 input functions                    ; 3           ;
+;     -- 0 input functions                    ; 0           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 67          ;
+;     -- arithmetic mode                      ; 0           ;
+;     -- qfbk mode                            ; 0           ;
+;     -- register cascade mode                ; 0           ;
+;     -- synchronous clear/load mode          ; 0           ;
+;     -- asynchronous clear/load mode         ; 3           ;
+;                                             ;             ;
+; Total registers                             ; 31          ;
+; I/O pins                                    ; 15          ;
+; Maximum fan-out node                        ; clock_50MHz ;
+; Maximum fan-out                             ; 25          ;
+; Total fan-out                               ; 258         ;
+; Average fan-out                             ; 3.15        ;
++---------------------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                 ; Entity Name      ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+------------------+--------------+
+; |Varredura_Matriz          ; 67 (8)      ; 31           ; 0          ; 15   ; 0            ; 36 (8)       ; 0 (0)             ; 31 (0)           ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz                                   ; Varredura_Matriz ; work         ;
+;    |Contador:comb_15|      ; 6 (3)       ; 3            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Contador:comb_15                  ; Contador         ; work         ;
+;       |FF_T:comb_10|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Contador:comb_15|FF_T:comb_10     ; FF_T             ; work         ;
+;       |FF_T:comb_7|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Contador:comb_15|FF_T:comb_7      ; FF_T             ; work         ;
+;       |FF_T:comb_8|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Contador:comb_15|FF_T:comb_8      ; FF_T             ; work         ;
+;    |Contador:comb_4|       ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Contador:comb_4                   ; Contador         ; work         ;
+;       |FF_T:comb_10|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Contador:comb_4|FF_T:comb_10      ; FF_T             ; work         ;
+;       |FF_T:comb_7|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Contador:comb_4|FF_T:comb_7       ; FF_T             ; work         ;
+;       |FF_T:comb_8|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Contador:comb_4|FF_T:comb_8       ; FF_T             ; work         ;
+;    |Divisor_Clock:comb_3|  ; 32 (7)      ; 25           ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 25 (0)           ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3              ; Divisor_Clock    ; work         ;
+;       |FF_T:comb_10|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_10 ; FF_T             ; work         ;
+;       |FF_T:comb_12|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_12 ; FF_T             ; work         ;
+;       |FF_T:comb_14|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_14 ; FF_T             ; work         ;
+;       |FF_T:comb_16|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_16 ; FF_T             ; work         ;
+;       |FF_T:comb_18|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_18 ; FF_T             ; work         ;
+;       |FF_T:comb_20|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_20 ; FF_T             ; work         ;
+;       |FF_T:comb_22|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_22 ; FF_T             ; work         ;
+;       |FF_T:comb_24|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_24 ; FF_T             ; work         ;
+;       |FF_T:comb_26|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_26 ; FF_T             ; work         ;
+;       |FF_T:comb_28|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_28 ; FF_T             ; work         ;
+;       |FF_T:comb_30|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_30 ; FF_T             ; work         ;
+;       |FF_T:comb_32|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_32 ; FF_T             ; work         ;
+;       |FF_T:comb_34|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_34 ; FF_T             ; work         ;
+;       |FF_T:comb_36|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_36 ; FF_T             ; work         ;
+;       |FF_T:comb_38|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_38 ; FF_T             ; work         ;
+;       |FF_T:comb_3|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_3  ; FF_T             ; work         ;
+;       |FF_T:comb_40|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_40 ; FF_T             ; work         ;
+;       |FF_T:comb_42|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_42 ; FF_T             ; work         ;
+;       |FF_T:comb_44|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_44 ; FF_T             ; work         ;
+;       |FF_T:comb_46|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_46 ; FF_T             ; work         ;
+;       |FF_T:comb_48|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_48 ; FF_T             ; work         ;
+;       |FF_T:comb_4|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_4  ; FF_T             ; work         ;
+;       |FF_T:comb_50|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_50 ; FF_T             ; work         ;
+;       |FF_T:comb_6|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_6  ; FF_T             ; work         ;
+;       |FF_T:comb_8|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Divisor_Clock:comb_3|FF_T:comb_8  ; FF_T             ; work         ;
+;    |Multiplexador:comb_16| ; 18 (18)     ; 0            ; 0          ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Varredura_Matriz|Multiplexador:comb_16             ; Multiplexador    ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 31    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Contador:comb_4|FF_T:comb_10"                                                        ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Contador:comb_4|FF_T:comb_8"                                                         ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Contador:comb_4|FF_T:comb_7"                                                         ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; t     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; not_q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "Contador:comb_4" ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; chaves[1] ; Input ; Info     ; Stuck at GND ;
+; chaves[0] ; Input ; Info     ; Stuck at VCC ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_50"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_48"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_46"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_44"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_42"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_40"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_38"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_36"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_34"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_32"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_30"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_28"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_26"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_24"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_22"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_20"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_18"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_16"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_14"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_12"                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_10" ;
++-----------+-------+----------+--------------------------------+
+; Port      ; Type  ; Severity ; Details                        ;
++-----------+-------+----------+--------------------------------+
+; chaves[1] ; Input ; Info     ; Stuck at VCC                   ;
+; chaves[0] ; Input ; Info     ; Stuck at GND                   ;
++-----------+-------+----------+--------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_8"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_6"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_4"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divisor_Clock:comb_3|FF_T:comb_3"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; t         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[1] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; chaves[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; not_q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri May  5 17:10:20 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off V2 -c V2
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file Contador.v
+    Info (12023): Found entity 1: Contador File: /media/aluno/LUIS/PBL 02/Contador.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file FF_T.v
+    Info (12023): Found entity 1: FF_T File: /media/aluno/LUIS/PBL 02/FF_T.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file quadro_2.v
+    Info (12023): Found entity 1: quadro_2 File: /media/aluno/LUIS/PBL 02/quadro_2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Multiplexador.v
+    Info (12023): Found entity 1: Multiplexador File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file quadro_1.v
+    Info (12023): Found entity 1: quadro_1 File: /media/aluno/LUIS/PBL 02/quadro_1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Divisor_Clock.v
+    Info (12023): Found entity 1: Divisor_Clock File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file Varredura_Matriz.v
+    Info (12023): Found entity 1: Varredura_Matriz File: /media/aluno/LUIS/PBL 02/Varredura_Matriz.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file quadro_3.v
+    Info (12023): Found entity 1: quadro_3 File: /media/aluno/LUIS/PBL 02/quadro_3.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file quadro_4.v
+    Info (12023): Found entity 1: quadro_4 File: /media/aluno/LUIS/PBL 02/quadro_4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file quadro_5.v
+    Info (12023): Found entity 1: quadro_5 File: /media/aluno/LUIS/PBL 02/quadro_5.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file quadro_6.v
+    Info (12023): Found entity 1: quadro_6 File: /media/aluno/LUIS/PBL 02/quadro_6.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file quadro_7.v
+    Info (12023): Found entity 1: quadro_7 File: /media/aluno/LUIS/PBL 02/quadro_7.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file quadro_0.v
+    Info (12023): Found entity 1: quadro_0 File: /media/aluno/LUIS/PBL 02/quadro_0.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at Contador.v(22): instance has no name File: /media/aluno/LUIS/PBL 02/Contador.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at Contador.v(24): instance has no name File: /media/aluno/LUIS/PBL 02/Contador.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at Contador.v(28): instance has no name File: /media/aluno/LUIS/PBL 02/Contador.v Line: 28
+Critical Warning (10846): Verilog HDL Instantiation warning at Multiplexador.v(29): instance has no name File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 29
+Critical Warning (10846): Verilog HDL Instantiation warning at Multiplexador.v(30): instance has no name File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 30
+Critical Warning (10846): Verilog HDL Instantiation warning at Multiplexador.v(31): instance has no name File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 31
+Critical Warning (10846): Verilog HDL Instantiation warning at Multiplexador.v(32): instance has no name File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at Multiplexador.v(33): instance has no name File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 33
+Critical Warning (10846): Verilog HDL Instantiation warning at Multiplexador.v(34): instance has no name File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at Multiplexador.v(35): instance has no name File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 35
+Critical Warning (10846): Verilog HDL Instantiation warning at Multiplexador.v(36): instance has no name File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 36
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(12): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(13): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(17): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(20): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 20
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(23): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 23
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(26): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 26
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(29): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 29
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(32): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(35): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 35
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(38): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 38
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(41): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 41
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(44): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 44
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(47): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 47
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(50): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 50
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(53): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 53
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(56): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 56
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(59): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 59
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(62): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 62
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(65): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 65
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(68): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 68
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(71): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 71
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(74): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 74
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(77): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 77
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(80): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 80
+Critical Warning (10846): Verilog HDL Instantiation warning at Divisor_Clock.v(83): instance has no name File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 83
+Critical Warning (10846): Verilog HDL Instantiation warning at Varredura_Matriz.v(20): instance has no name File: /media/aluno/LUIS/PBL 02/Varredura_Matriz.v Line: 20
+Critical Warning (10846): Verilog HDL Instantiation warning at Varredura_Matriz.v(22): instance has no name File: /media/aluno/LUIS/PBL 02/Varredura_Matriz.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at Varredura_Matriz.v(51): instance has no name File: /media/aluno/LUIS/PBL 02/Varredura_Matriz.v Line: 51
+Critical Warning (10846): Verilog HDL Instantiation warning at Varredura_Matriz.v(64): instance has no name File: /media/aluno/LUIS/PBL 02/Varredura_Matriz.v Line: 64
+Info (12127): Elaborating entity "Varredura_Matriz" for the top level hierarchy
+Info (12128): Elaborating entity "Divisor_Clock" for hierarchy "Divisor_Clock:comb_3" File: /media/aluno/LUIS/PBL 02/Varredura_Matriz.v Line: 20
+Info (12128): Elaborating entity "FF_T" for hierarchy "Divisor_Clock:comb_3|FF_T:comb_3" File: /media/aluno/LUIS/PBL 02/Divisor_Clock.v Line: 12
+Info (12128): Elaborating entity "Contador" for hierarchy "Contador:comb_4" File: /media/aluno/LUIS/PBL 02/Varredura_Matriz.v Line: 22
+Info (12128): Elaborating entity "Multiplexador" for hierarchy "Multiplexador:comb_16" File: /media/aluno/LUIS/PBL 02/Varredura_Matriz.v Line: 64
+Info (12128): Elaborating entity "quadro_0" for hierarchy "Multiplexador:comb_16|quadro_0:comb_14" File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 29
+Info (12128): Elaborating entity "quadro_1" for hierarchy "Multiplexador:comb_16|quadro_1:comb_15" File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 30
+Info (12128): Elaborating entity "quadro_2" for hierarchy "Multiplexador:comb_16|quadro_2:comb_16" File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 31
+Info (12128): Elaborating entity "quadro_3" for hierarchy "Multiplexador:comb_16|quadro_3:comb_17" File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 32
+Info (12128): Elaborating entity "quadro_4" for hierarchy "Multiplexador:comb_16|quadro_4:comb_18" File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 33
+Info (12128): Elaborating entity "quadro_5" for hierarchy "Multiplexador:comb_16|quadro_5:comb_19" File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 34
+Info (12128): Elaborating entity "quadro_6" for hierarchy "Multiplexador:comb_16|quadro_6:comb_20" File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 35
+Info (12128): Elaborating entity "quadro_7" for hierarchy "Multiplexador:comb_16|quadro_7:comb_21" File: /media/aluno/LUIS/PBL 02/Multiplexador.v Line: 36
+Info (21057): Implemented 82 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 67 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 340 megabytes
+    Info: Processing ended: Fri May  5 17:10:29 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:11
+
+
